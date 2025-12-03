@@ -1,11 +1,12 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "Swear-Display", sans-serif;
+  font-family: "SwearBanner";
   font-style: normal;
   font-weight: normal;
   font-optical-sizing: auto;
-  src: local("swear-font-family"), local("swear-font-family"), url("../../fonts/SwearBannerDemo-MediumCilati-Regular.otf") format("otf");
+  src:url("fonts/swear-font-family/SwearBannerDemo-MediumCilati-Regular.otf") format("opentype");
+
   font-display: swap;
 }
 
@@ -16,9 +17,9 @@
   --color-background: white;
   --color-text: #131516;
   --color-anchor: #00274C;
-  --font-family: "Swear-Display", sans-serif;
+  --font-family: "SwearBanner", serif;
   --font-weight-strong: 550;
-  --font-size-h1: 2.5rem;
+  --font-size-h1: 10rem;
   --font-size-h2: 2rem;
   --font-size-h3: 1.5rem;
   --font-size-h4: 1rem;
@@ -26,3 +27,33 @@
   --border-radius: 8px;
 }
 
+html {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-size: clamp(2rem, 7vw, var(--font-size-h1));
+  text-align: center;
+  font-family: var(--font-family);
+}
+
+/* gradient */
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 30s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
