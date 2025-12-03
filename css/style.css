@@ -21,7 +21,7 @@
 :root {
   --color-primary: #FFCB05;
   --color-primary-alt: #6f6ffd;
-  --color-secondary: #00274C;
+  --color-secondary: #5535e6;
   --color-background: white;
   --color-text: #131516;
   --color-anchor: #00274C;
@@ -50,20 +50,27 @@ h1 strong {
 #short_intro {
   margin: 0rem 0rem 15rem 0rem;
   text-align: center;
+  font-size: 2rem;
 }
 
 h2 {
   font-size: 3.5rem;
 }
 
+h3 {
+  font-size: 2.5rem;
+}
 
 /* MAIN BODY STUFF */
+* {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 1rem;
   font-family: var(--font-family);
   line-height: 1.5;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #sabpic {
@@ -77,8 +84,8 @@ body {
 }
 /* gradient - MAKE SURE TO ADD PREFERS REDUCED MOTION LATER */
 body {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
+	background: linear-gradient(-45deg, #ff9751, #98f5e5, #5535e6);
+	background-size: 1000% 1000%;
 	animation: gradient 30s ease infinite;
 	height: 100vh;
 }
@@ -94,6 +101,36 @@ body {
 		background-position: 0% 50%;
 	}
 }
+
+/* text fade in stuff hehehehh*/
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#main {
+  animation: 1.5s fadein;
+}
+
+/* REDUCED MOTION STUFF */
+  @media (prefers-reduced-motion: reduce) {
+    body {
+      animation: none;
+      transition: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #main {
+      animation: none;
+      transition: none;
+    }
+  }
 
 /* NAV BAR STUFF */
 nav {
