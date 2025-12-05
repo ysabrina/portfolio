@@ -15,17 +15,17 @@
       <!-- <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo"> -->
       <nav>
         <ul>
-          <li><a href = "projects.html">Projects</a></li>
+          <li><a href = "index.html">Projects</a></li>
           <li><a href = "about.html">About</a></li>
           <li><a href = "contact.html">Contact</a></li>
-          <li><a href = "resume.html">Resume</a></li>
-          <li><a href = "more.html">More Projects</a></li>
+          <!-- <li><a href = "resume.html">Resume</a></li>
+          <li><a href = "more.html">More Projects</a></li> -->
         </ul>
       </nav>
     </header>
 
     <main id="main">
-      <h1>CONTACT ME</h1>
+      <h2>CONTACT</h2>
     <section>
       <p>
         Ann Arbor, MI
@@ -44,13 +44,18 @@
       </p>
     </section>
 
+
 <section id="contact">
-    <h1>Send me a Message! :D</h1>
-    <form onsubmit="event.preventDefault(); alert('Message sent! (demo)'); this.reset();">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Email Address" required>
-    <textarea rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send</button>
+    <h2>Chat With Me!</h2>
+    
+    <form onsubmit="event.preventDefault(); alert('Message sent: Thanks for messaging - to you soon! (demo)'); this.reset();">
+
+    <input name="name" type="text" class="feedback" placeholder="Your Name" required/>
+    <input name="email" type="text" class="feedback" placeholder="Email Address" required/>
+    <textarea name="text" class="feedback" placeholder="Your Message" required></textarea>
+    
+    <button type="submit">SUBMIT</button>
+
     </form>
 </section>
 
